@@ -26,10 +26,15 @@ RUN git clone https://github.com/moevm/devops-examples.git /tmp/devops-examples 
     && cp -r /tmp/devops-examples/EXAMPLE_APP/* "${APP_DIR}" \
     && rm -rf /tmp/devops-examples
 
+RUN sed -i "s/app.run(debug = True)/app.run(host='0.0.0.0', port=5000, debug=True)/" "${APP_DIR}/main.py"
+
 WORKDIR ${APP_DIR}
 
 RUN pip3 install --no-cache-dir \
     flask==3.0.3 \
-    werkzeug==3.0.3
+    werkzeug==3.0.3 \
+    flask-login==0.6.3 \
+    celery==5.3.6 \
+    lti==0.9.5
 
 CMD service ssh start && python3 main.py
