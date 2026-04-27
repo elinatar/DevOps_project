@@ -1,0 +1,35 @@
+FROM ubuntu:22.04
+
+ARG SSH_USER=devops
+ARG SSH_PASSWORD=devops80
+
+ENV DEBIAN_FRONTEND=noninteractive
+ENV APP_DIR=/app
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    git=1:2.34.1-* \
+    python3=3.10.6-* \
+    python3-pip=22.0.2+dfsg-* \
+    openssh-server=1:8.9p1-* \
+    patch=2.7.6-* \
+    ca-certificates=* \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN mkdir -p /var/run/sshd \
+    && useradd -m -s /bin/bash "${SSH_USER}" \
+    && echo "${SSH_USER}:${SSH_PASSWORD}" | chpasswd \
+    && sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config \
+    && sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
+
+RUN git clone https://github.com/moevm/devops-examples.git /tmp/devops-examples \
+    && mkdir -p "${APP_DIR}" \
+    && cp -r /tmp/devops-examples/EXAMPLE_APP/* "${APP_DIR}" \
+    && rm -rf /tmp/devops-examples
+
+WORKDIR ${APP_DIR}
+
+RUN pip3 install --no-cache-dir \
+    flask==3.0.3 \
+    werkzeug==3.0.3
+
+CMD service ssh start && python3 main.py
