@@ -1,0 +1,12 @@
+# Логи тестов
+tester/logs/*.log
+
+# Файл окружения
+.env
+
+# Python
+__pycache__/
+*.pyc
+
+# VS Code
+.vscode/
