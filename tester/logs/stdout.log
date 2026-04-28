@@ -1,0 +1,27 @@
+[2026-04-28 17:32:53] START: HTML formatting test
+[2026-04-28 17:32:54] HTML formatting test: CSS-HTML-Prettify.
+[2026-04-28 17:32:54] HTML formatting test: 
+[2026-04-28 17:32:54] HTML formatting test: StandAlone Async cross-platform Prettifier Beautifier for the Web.
+[2026-04-28 17:32:54] HTML formatting test: 2.5.5
+[2026-04-28 17:32:54] HTML formatting test: Target is a Folder with CSS / SCSS, HTML, JS.
+[2026-04-28 17:32:54] HTML formatting test: Processing a whole Folder may take some time...
+[2026-04-28 17:32:54] HTML formatting test: Process 74 is processing /tmp/tmp3uvxt3e3/templates/files.html.
+[2026-04-28 17:32:54] HTML formatting test: Monkey Patching BeautifulSoup on-the-fly to process HTML...
+[2026-04-28 17:32:54] HTML formatting test: Process 74 is processing /tmp/tmp3uvxt3e3/templates/upload.html.
+[2026-04-28 17:32:54] HTML formatting test: Monkey Patching BeautifulSoup on-the-fly to process HTML...
+[2026-04-28 17:32:54] HTML formatting test: Process 75 is processing /tmp/tmp3uvxt3e3/templates/index.html.
+[2026-04-28 17:32:54] HTML formatting test: Monkey Patching BeautifulSoup on-the-fly to process HTML...
+[2026-04-28 17:32:54] HTML formatting test: 
+[2026-04-28 17:32:54] HTML formatting test:  -------------------------------------------------------------------------------- 
+[2026-04-28 17:32:54] HTML formatting test:  Files Processed: ['/tmp/tmp3uvxt3e3/templates/files.html', '/tmp/tmp3uvxt3e3/templates/index.html', '/tmp/tmp3uvxt3e3/templates/upload.html'].
+[2026-04-28 17:32:54] HTML formatting test: Number of Files Processed:
+[2026-04-28 17:32:54] HTML formatting test:           1
+[2026-04-28 17:32:54] HTML formatting test: 
+[2026-04-28 17:32:54] HTML formatting test: HTML formatting passed for 3 files
+[2026-04-28 17:32:54] SUCCESS: HTML formatting test
+[2026-04-28 17:32:54] START: Custom rule test
+[2026-04-28 17:32:54] SUCCESS: Custom rule test
+[2026-04-28 17:32:54] START: Upload test
+[2026-04-28 17:32:55] Upload test: Upload integration test passed: test_upload_file.txt
+[2026-04-28 17:32:55] SUCCESS: Upload test
+[2026-04-28 17:32:55] ALL TESTS PASSED

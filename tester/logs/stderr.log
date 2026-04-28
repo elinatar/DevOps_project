@@ -1,0 +1,11 @@
+[2026-04-28 17:32:54] HTML formatting test: /usr/local/bin/css-html-prettify.py:347: GuessedAtParserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+[2026-04-28 17:32:54] HTML formatting test: 
+[2026-04-28 17:32:54] HTML formatting test: The code that caused this warning is on line 347 of the file /usr/local/bin/css-html-prettify.py. To get rid of this warning, pass the additional argument 'features="html.parser"' to the BeautifulSoup constructor.
+[2026-04-28 17:32:54] HTML formatting test: 
+[2026-04-28 17:32:54] HTML formatting test:   html = BeautifulSoup(html).prettify()
+[2026-04-28 17:32:54] HTML formatting test: /usr/local/bin/css-html-prettify.py:347: GuessedAtParserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+[2026-04-28 17:32:54] HTML formatting test: 
+[2026-04-28 17:32:54] HTML formatting test: The code that caused this warning is on line 347 of the file /usr/local/bin/css-html-prettify.py. To get rid of this warning, pass the additional argument 'features="html.parser"' to the BeautifulSoup constructor.
+[2026-04-28 17:32:54] HTML formatting test: 
+[2026-04-28 17:32:54] HTML formatting test:   html = BeautifulSoup(html).prettify()
+[2026-04-28 17:32:54] HTML formatting test: 
