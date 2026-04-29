@@ -25,6 +25,7 @@ RUN mkdir -p ${TESTER_DIR}/tests ${TESTER_DIR}/logs
 
 RUN pip3 install --no-cache-dir \
     requests==2.32.3 \
-    css-html-prettify==2.5.5
+    css-html-prettify==2.5.5 \
+    pylint==3.0.3
 
 CMD service ssh start && python3 -m http.server 3000
