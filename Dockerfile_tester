@@ -7,10 +7,10 @@ ENV DEBIAN_FRONTEND=noninteractive
 ENV TESTER_DIR=/tester
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    python3=3.10.6-* \
-    python3-pip=22.0.2+dfsg-* \
-    openssh-server=1:8.9p1-* \
-    ca-certificates=* \
+    python3=3.10.6-1~22.04.1 \
+    python3-pip=22.0.2+dfsg-1ubuntu0.7 \
+    openssh-server=1:8.9p1-3ubuntu0.14 \
+    ca-certificates=20240203~22.04.1 \
     && rm -rf /var/lib/apt/lists/*
 
 RUN mkdir -p /var/run/sshd \

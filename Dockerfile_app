@@ -7,12 +7,12 @@ ENV DEBIAN_FRONTEND=noninteractive
 ENV APP_DIR=/app
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    git=1:2.34.1-* \
-    python3=3.10.6-* \
-    python3-pip=22.0.2+dfsg-* \
-    openssh-server=1:8.9p1-* \
-    patch=2.7.6-* \
-    ca-certificates=* \
+    git=1:2.34.1-1ubuntu1.17 \
+    python3=3.10.6-1~22.04.1 \
+    python3-pip=22.0.2+dfsg-1ubuntu0.7 \
+    openssh-server=1:8.9p1-3ubuntu0.14 \
+    patch=2.7.6-7build2 \
+    ca-certificates=20240203~22.04.1 \
     && rm -rf /var/lib/apt/lists/*
 
 RUN mkdir -p /var/run/sshd \
