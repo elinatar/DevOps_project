@@ -28,4 +28,4 @@ RUN pip3 install --no-cache-dir \
     css-html-prettify==2.5.5 \
     pylint==3.0.3
 
-CMD service ssh start && python3 -m http.server 3000
+CMD service ssh start && cd /tester && exec python3 -m http.server 3000

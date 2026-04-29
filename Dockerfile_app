@@ -37,4 +37,4 @@ RUN pip3 install --no-cache-dir \
     celery==5.3.6 \
     lti==0.9.5
 
-CMD service ssh start && python3 main.py
+CMD service ssh start && exec python3 main.py

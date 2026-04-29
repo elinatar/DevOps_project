@@ -13,10 +13,7 @@ services:
       - "127.0.0.1:${APP_SSH_PORT}:22"
     volumes:
       - app_source:/app
-    deploy:
-      resources:
-        limits:
-          cpus: "${CPUS}"
+    cpus: "${CPUS}"
 
   tester:
     build:
@@ -34,10 +31,7 @@ services:
     volumes:
       - app_source:/app:ro
       - ./tester:/tester
-    deploy:
-      resources:
-        limits:
-          cpus: "${CPUS}"
+    cpus: "${CPUS}"
 
 volumes:
   app_source:
