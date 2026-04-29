@@ -17,15 +17,33 @@ def timestamp():
 def write_stdout(message):
     line = f"[{timestamp()}] {message}"
     print(line)
+
+    # запись в файл
     with STDOUT_LOG.open("a", encoding="utf-8") as file:
         file.write(line + "\n")
+
+    # запись в docker logs
+    try:
+        with open("/proc/1/fd/1", "a") as docker_out:
+            docker_out.write(line + "\n")
+    except Exception:
+        pass
 
 
 def write_stderr(message):
     line = f"[{timestamp()}] {message}"
     print(line, file=sys.stderr)
+
+    # запись в файл
     with STDERR_LOG.open("a", encoding="utf-8") as file:
         file.write(line + "\n")
+
+    # запись в docker logs
+    try:
+        with open("/proc/1/fd/2", "a") as docker_err:
+            docker_err.write(line + "\n")
+    except Exception:
+        pass
 
 
 def run_step(name, command):
